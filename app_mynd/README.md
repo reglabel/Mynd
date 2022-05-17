@@ -1,4 +1,4 @@
-# app_mynd
+# myndlia
 
 A new Flutter project.
 

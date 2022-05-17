@@ -1,4 +1,4 @@
-package com.example.app_mynd
+package com.example.myndlia
 
 import io.flutter.embedding.android.FlutterActivity
 

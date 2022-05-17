@@ -1,6 +1,6 @@
 {
-    "name": "app_mynd",
-    "short_name": "app_mynd",
+    "name": "myndlia",
+    "short_name": "myndlia",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

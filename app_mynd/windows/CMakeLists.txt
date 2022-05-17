@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(app_mynd LANGUAGES CXX)
+project(myndlia LANGUAGES CXX)
 
-set(BINARY_NAME "app_mynd")
+set(BINARY_NAME "myndlia")
 
 cmake_policy(SET CMP0063 NEW)
 
