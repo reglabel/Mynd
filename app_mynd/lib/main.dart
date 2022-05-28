@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './pages/login.page.dart';
+import 'dart:ui';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Mynd',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.deepPurple,
       ),
       home: LoginPage(),
     );

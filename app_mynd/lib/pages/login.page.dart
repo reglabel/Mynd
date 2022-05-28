@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               width: 128,
               height: 128,
-              child: Image.asset("assets/logo.png"),
+              child: Image.asset("assets/app-logo.png"),
             ),
             SizedBox(
               height: 20,
@@ -80,8 +80,8 @@ class LoginPage extends StatelessWidget {
                   end: Alignment.bottomRight,
                   stops: [0.3, 1],
                   colors: [
-                    Color(0xFFF58524),
-                    Color(0XFFF92B7F),
+                    Color.fromARGB(255, 89, 46, 109),
+                    Color.fromARGB(255, 75, 45, 243),
                   ],
                 ),
                 borderRadius: BorderRadius.all(
