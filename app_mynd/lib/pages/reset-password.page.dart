@@ -24,11 +24,7 @@ class ResetPasswordPage extends StatelessWidget {
                 Container(
                   child: Column(
                     children: <Widget>[
-                      SizedBox(
-                        width: 200,
-                        height: 200,
-                        child: Image.asset("assets/reset-password-icon.png"),
-                      ),
+                      
                       SizedBox(
                         height: 20,
                       ),
@@ -81,8 +77,8 @@ class ResetPasswordPage extends StatelessWidget {
                             end: Alignment.bottomRight,
                             stops: [0.3, 1],
                             colors: [
-                              Color(0xFFF58524),
-                              Color(0XFFF92B7F),
+                              Color.fromARGB(255, 89, 46, 109),
+                              Color.fromARGB(255, 75, 45, 243),
                             ],
                           ),
                           borderRadius: BorderRadius.all(
