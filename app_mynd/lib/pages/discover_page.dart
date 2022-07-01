@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myndlia/pages/musicSection/musicPage.dart';
 import 'detail_page.dart';
+import 'notesSection/apresetacao/notas.dart';
 import 'widgets/category_boxes.dart';
 import 'icons.dart';
 import 'widgets/discover_card.dart';
@@ -76,15 +78,15 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     onPressed: (value) => print(value),
                   ),
                   CategoryBoxes(
-                    text: "Depression",
+                    text: "Deprimido",
                     onPressed: (value) => print(value),
                   ),
                   CategoryBoxes(
-                    text: "Baby Sleep",
+                    text: "Raivoso",
                     onPressed: (value) => print(value),
                   ),
                   CategoryBoxes(
-                    text: "Insomnia",
+                    text: "Cansado",
                     onPressed: (value) => print(value),
                   ),
                 ],
@@ -96,7 +98,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Recommended",
+                    "Recomendado",
                     style: TextStyle(
                         color: Color(0xff515979),
                         fontWeight: FontWeight.w500,
@@ -104,7 +106,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   ),
                   GestureDetector(
                       onTap: onSeeAllTapped,
-                      child: Text("See All",
+                      child: Text("Ver tudo",
                           style: TextStyle(
                               color: Color(0xff4A80F0),
                               fontWeight: FontWeight.w500,
@@ -125,14 +127,14 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   DiscoverCard(
                     tag: "sleepMeditation",
                     onTap: onSleepMeditationTapped,
-                    title: "Sleep Meditation",
-                    subtitle: "7 Day Audio and Video Series",
+                    title: "Meditação do Sono",
+                    subtitle: "Áudio para 7 dias de conforto",
                   ),
                   SizedBox(width: 20.w),
                   DiscoverCard(
                     onTap: onDepressionHealingTapped,
-                    title: "Depression Healing",
-                    subtitle: "10 Days Audio and Video Series",
+                    title: "Encarando a Depressão",
+                    subtitle: "Áudio para 10 de contemplação",
                     gradientStartColor: Color(0xffFC67A7),
                     gradientEndColor: Color(0xffF6815B),
                   ),
@@ -143,7 +145,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
             Padding(
               padding: EdgeInsets.only(left: 28.w),
               child: Text(
-                "Recent",
+                "Explore",
                 style: TextStyle(
                     color: Color(0xff515979),
                     fontWeight: FontWeight.w500,
@@ -158,33 +160,17 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 physics: NeverScrollableScrollPhysics(),
                 children: [
                   DiscoverSmallCard(
-                    onTap: (){},
-                    title: "Calming Sounds",
+                    onTap: onAudiosTapped,
+                    title: "Arquivo de Áudios",
                     gradientStartColor: Color(0xff13DEA0),
                     gradientEndColor: Color(0xff06B782),
                   ),
                   DiscoverSmallCard(
-                    onTap: (){},
-                    title: "Insomnia",
-                    gradientStartColor: Color(0xffFC67A7),
-                    gradientEndColor: Color(0xffF6815B),
-                    icon:    SvgAsset(
-                      assetName: AssetName.tape,
-                      height: 24.w,
-                      width: 24.w,
-                    ),
-                  ),
-                  DiscoverSmallCard(
-                    onTap: (){
-                    },
-                    title: "For Children",
+                    onTap: onNotesTapped,
+                    title: "Seu Diário",
                     gradientStartColor: Color(0xffFFD541),
                     gradientEndColor: Color(0xffF0B31A),
-                  ),
-                  DiscoverSmallCard(
-                    onTap: (){},
-                    title: "Tips For Sleeping",
-                    icon:  SvgAsset(
+                    icon:    SvgAsset(
                       assetName: AssetName.tape,
                       height: 24.w,
                       width: 24.w,
@@ -217,5 +203,23 @@ class _DiscoverPageState extends State<DiscoverPage> {
   }
 
   void onSearchIconTapped() {
+  }
+
+  void onNotesTapped() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Notas(),
+      ),
+    );
+  }
+
+  void onAudiosTapped() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MusicPage(),
+      ),
+    );
   }
 }
