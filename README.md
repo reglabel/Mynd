@@ -1,2 +1,2 @@
 # Mynd
- Trabalho para disciplina de "Projeto Integrador III".
+ Trabalho realizado para disciplina de "Projeto Integrador III".
